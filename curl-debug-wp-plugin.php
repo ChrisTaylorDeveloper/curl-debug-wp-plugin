@@ -8,9 +8,9 @@
  */
 function ctd_curl_report($url) {
     $ch = curl_init();
- 	curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_URL, $url);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-	$data = curl_exec($ch);
+    $data = curl_exec($ch);
 
     if(false === $data) {
         echo 'curl_exec failed!', '<br>';
