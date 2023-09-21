@@ -16,6 +16,10 @@ function ctd_curl_report($url) {
         echo 'curl_exec failed!', '<br>';
     }
 
+    if (curl_errno($ch)) {
+        echo curl_error($ch), '<br>';
+    }
+
     curl_close($ch);
     echo strlen($data), ' chars from ', $url, '<br>';
 }
